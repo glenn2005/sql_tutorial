@@ -61,7 +61,7 @@ def execute_read_query(connection, query):
 
 
 ###################  Connect to The Database File *********************
-connection = create_connection("/Users/g_money/sql_tutorial/oak8_pods.sqlite6")
+connection = create_connection("oak8_pods.sqlite6")
 
 ##########################  Create And Execute Queries ################
 create_users_table = """
@@ -106,7 +106,7 @@ CREATE TABLE IF NOT EXISTS likes (
   post_id integer NOT NULL, 
   FOREIGN KEY (user_id) REFERENCES users (id) FOREIGN KEY (post_id) REFERENCES posts (id)
 );
-"""
+"""https://codehs.com/student/1847990/section/152354/assignments#
 execute_query(connection, create_likes_table)  
 
 
@@ -219,9 +219,10 @@ print('\n',column_names)
 for posts_comments_user in posts_comments_users:
     print(posts_comments_user)
 print('\n')
-
+"""
 execute_query(connection,'Drop table users')
 execute_query(connection,'Drop table posts')
 execute_query(connection,'Drop table comments')
 execute_query(connection,'Drop table likes')
 print('\n')
+"""
